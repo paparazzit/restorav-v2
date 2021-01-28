@@ -66,9 +66,6 @@ $(".slider-two").owlCarousel({
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
 	var currentScrollPos = window.pageYOffset;
-	var nav = document.querySelector("nav");
-	var logo = document.querySelector(".logo");
-	var img = document.querySelector(".img");
 
 	var target = document.querySelectorAll(".scroll");
 	// console.log(`trenutna pozicija: ${currentScrollPos}`);
@@ -89,20 +86,6 @@ window.onscroll = function () {
 
 			target[index].style.transform = `scale(${scale})`;
 		}
-	}
-
-	if (prevScrollpos < currentScrollPos) {
-		nav.classList.add("gone");
-		logo.classList.add("gone");
-	} else {
-		nav.classList.remove("gone");
-		logo.classList.remove("gone");
-	}
-	prevScrollpos = currentScrollPos;
-	if (currentScrollPos > 400) {
-		img.classList.add("gone");
-	} else {
-		img.classList.remove("gone");
 	}
 };
 
