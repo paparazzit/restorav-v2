@@ -505,6 +505,152 @@ p.meta {
 	border-radius: 50%;
 }
 
+/************ Single ***************/
+
+
+.single {
+    background: var(--secondary);
+/*    height: 50vh;*/
+}
+.single .container {
+    display: flex;
+    flex-direction: row;
+}
+.single .container article {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    margin: 100px;
+    box-shadow: 2px 2px 15px gray;
+} 
+.single aside {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    margin-top: 100px;
+}
+.single aside .recentPosts,
+.openingHours {
+    border-radius: 30px 5px 30px 5px;
+    background: var(--light);
+    margin-bottom: 30px;
+}
+
+.single aside .recentPosts div,
+.openingHours div {
+/*    background: var(--light);*/
+/*    opacity: .2;*/
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.single aside .recentPosts div a,
+.openingHours div a {
+    color: white;
+    text-decoration: none;
+    color: var(--primary);
+    padding: 3px;
+}
+
+.single aside .recentPosts div a:hover,
+.openingHours div a:hover {
+    text-decoration: underline;
+}
+
+.single aside .recentPosts h3,
+.openingHours h3 {
+    text-align: center;
+    color: var(--light);
+    background: var(--primary);
+    padding: 15px;
+    border-radius: 30px 0px 30px 0px;
+   
+}
+
+.single .openingHours div p {
+    margin: 10px;
+}
+    
+.single .dailyPic {
+    background-image: url(img/blog-img-1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+/*    overflow-y: hidden;*/
+    height: 90vh;
+}
+
+.single .dailyDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+/*    align-items: center;*/
+    padding: 50px;
+    background: var(--light);
+} 
+.single .dailyDescription h2 {
+    text-transform: uppercase;
+    font-size: 3rem;
+	margin-bottom: 50px;
+    color: var(--primary);
+    text-align: center;
+}
+
+
+.single hr { 
+  width: 100%;
+  height: 30px; 
+  border-style: solid; 
+  border-color: var(--primary); 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.single hr:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: var(--primary);
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+
+.single .dailyDescription .nutritiveValue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.single .ingredients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single .ingredients i {
+    color: var(--primary);
+    font-size: 3rem;
+    margin: 0 15px 20px 20px;
+}
+
+.single p {
+    text-align: justify;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.single .btn {
+    margin: 30px auto 0 auto;
+    font-size: 1.3rem;
+}
+
+
 /************ Daily ***************/
 
 .daily {
@@ -531,7 +677,7 @@ p.meta {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+/*    align-items: center;*/
     padding: 50px;
     background: var(--light);
 } 
