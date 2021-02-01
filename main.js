@@ -1,29 +1,11 @@
-//Burger menu
+//HamBurger menu
 
-const navSlide = () => {
-	const burger = document.querySelector(".burger");
-	const nav = document.querySelector(".nav-links");
-	const navLinks = document.querySelectorAll(".nav-links li");
+const menuIcon = document.querySelector('.hamburger-menu');
+const navbar = document.querySelector('.navbar');
 
-	burger.addEventListener("click", () => {
-		//Toggle Nav
-		nav.classList.toggle("nav-active");
-
-		//Animate Links
-		navLinks.forEach((link, index) => {
-			if (link.style.animation) {
-				link.style.animation = "";
-			} else {
-				link.style.animation = `navLinkFade 0.5s ease forwards ${
-					index / 7 + 1.5
-				}s`;
-			}
-		});
-		//BurgerAnimation
-		burger.classList.toggle("toggle");
-	});
-};
-navSlide();
+menuIcon.addEventListener('click', ()=> {
+    navbar.classList.toggle('change');
+});
 
 $(".slider-one").owlCarousel({
 	loop: true,
@@ -66,9 +48,6 @@ $(".slider-two").owlCarousel({
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
 	var currentScrollPos = window.pageYOffset;
-	var nav = document.querySelector("nav");
-	var logo = document.querySelector(".logo");
-	var img = document.querySelector(".img");
 
 	var target = document.querySelectorAll(".scroll");
 	// console.log(`trenutna pozicija: ${currentScrollPos}`);
@@ -89,20 +68,6 @@ window.onscroll = function () {
 
 			target[index].style.transform = `scale(${scale})`;
 		}
-	}
-
-	if (prevScrollpos < currentScrollPos) {
-		nav.classList.add("gone");
-		logo.classList.add("gone");
-	} else {
-		nav.classList.remove("gone");
-		logo.classList.remove("gone");
-	}
-	prevScrollpos = currentScrollPos;
-	if (currentScrollPos > 400) {
-		img.classList.add("gone");
-	} else {
-		img.classList.remove("gone");
 	}
 };
 

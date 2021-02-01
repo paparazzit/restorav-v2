@@ -20,6 +20,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+    overflow-x: hidden;
 }
 body {
 	font-size: 16px;
@@ -42,7 +43,7 @@ body {
 	font-weight: 500;
 	background-color: var(--primary);
 	border: 2px solid var(--primary);
-	color: white;
+	color: var(--light);
 	cursor: pointer;
 }
 .btn:focus {
@@ -68,30 +69,52 @@ nav {
 	display: flex;
 	background-color: var(--primary);
 }
-.nav-links {
+.nav-list {
 	display: flex;
 	justify-content: space-around;
-	width: 30%;
+	width: 32%;
 	list-style: none;
+    
 }
-.nav-links a {
+.nav-item {
 	color: var(--light);
 	text-decoration: none;
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 1.2rem;
+    display: flex;
+	justify-content: space-around;
+	width: 42%;
+	list-style: none;
+    margin-top: 30px;
+}
+.nav-item a {
+    list-style: none;
+    color: var(--light);
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 20px;
+    margin-bottom: 0px;
+    
+}
+/****** Nav hambrger menu *****/
+.hamburger-menu {
+	display: none;
+    
+}
+.hamburger-menu {
+    width: 35px;
+    height: 30px;
+    position:fixed;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
 }
 
-/****** Nav Burger div *****/
-.burger {
-	display: none;
-}
-.burger div {
-	width: 25px;
-	height: 3px;
-	background-color: var(--light);
-	margin: 5px;
-	transition: all 0.3s ease;
-}
+
 /******* Header ********/
 
 header {
@@ -145,7 +168,7 @@ hgroup h1 {
 	display: block;
 	height: 8px;
 	width: 8px;
-	background-color: white;
+	background-color: var(--light);
 	margin: 10px;
 	border-radius: 50%;
 }
@@ -196,9 +219,10 @@ hgroup h1 {
 }
 .menu-item {
 	padding: 0 30px;
+    
 }
 .card {
-	background-color: white;
+	background-color: var(--light);
 }
 .card img {
 	width: 100%;
@@ -236,7 +260,7 @@ p.price {
 }
 
 .blog-article {
-	background-color: white;
+	background-color: var(--light);
 	display: flex;
 
 	align-items: center;
@@ -289,7 +313,7 @@ p.meta {
 
 .order {
 	background-color: var(--primary);
-	color: white;
+	color: var(--light);
 	padding: 50px 0 100px 0;
 }
 .order h2 {
@@ -315,7 +339,7 @@ p.meta {
 	font-size: 3rem;
 	border-radius: 50%;
 	color: var(--primary);
-	background-color: white;
+	background-color: var(--light);
 	margin-bottom: 30px;
 }
 .order article h4 {
@@ -351,7 +375,7 @@ p.meta {
 .getInTouch {
 	position: absolute;
 	background-color: var(--primary);
-	background-color: white;
+	background-color: var(--light);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -378,7 +402,7 @@ p.meta {
 }
 .getInTouch a {
 	text-decoration: none;
-	color: white;
+	color: var(--light);
 	font-size: 1.2rem;
 	font-weight: 500;
 	display: block;
@@ -394,7 +418,7 @@ p.meta {
 	transition: 0.3s all ease-in-out;
 }
 .getInTouch a:hover {
-	background-color: white;
+	background-color: var(--light);
 	color: var(--primary);
 	border: 1px solid var(--primary);
 }
@@ -412,7 +436,7 @@ p.meta {
 	flex: 0 0 45%;
 	margin-bottom: 20px;
 	background-color: var(--primary);
-	background-color: white;
+	background-color: var(--light);
 	border-top: none;
 	border-right: none;
 	border-left: none;
@@ -424,7 +448,7 @@ p.meta {
 .getInTouch form textarea {
 	flex: 0 0 100%;
 	background-color: var(--primary);
-	background-color: white;
+	background-color: var(--light);
 	border: 1px solid var(--primary);
 	color: var(--primary);
 	font-size: 1rem;
@@ -437,7 +461,7 @@ p.meta {
 	font-family: var(--font-family);
 }
 .getInTouch form .btn {
-	border: 2px solid white;
+	border: 2px solid var(--light);
 	display: block;
 	margin: 30px auto 0 auto;
 }
@@ -505,6 +529,152 @@ p.meta {
 	border-radius: 50%;
 }
 
+/************ Single ***************/
+
+
+.single {
+    background: var(--secondary);
+/*    height: 50vh;*/
+}
+.single .container {
+    display: flex;
+    flex-direction: row;
+}
+.single .container article {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    margin: 100px;
+    box-shadow: 2px 2px 15px gray;
+} 
+.single aside {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    margin-top: 100px;
+}
+.single aside .recentPosts,
+.openingHours {
+    border-radius: 30px 5px 30px 5px;
+    background: var(--light);
+    margin-bottom: 30px;
+}
+
+.single aside .recentPosts div,
+.openingHours div {
+/*    background: var(--light);*/
+/*    opacity: .2;*/
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.single aside .recentPosts div a,
+.openingHours div a {
+    color: var(--light);
+    text-decoration: none;
+    color: var(--primary);
+    padding: 3px;
+}
+
+.single aside .recentPosts div a:hover,
+.openingHours div a:hover {
+    text-decoration: underline;
+}
+
+.single aside .recentPosts h3,
+.openingHours h3 {
+    text-align: center;
+    color: var(--light);
+    background: var(--primary);
+    padding: 15px;
+    border-radius: 30px 0px 30px 0px;
+   
+}
+
+.single .openingHours div p {
+    margin: 10px;
+}
+    
+.single .dailyPic {
+    background-image: url(img/blog-img-1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+/*    overflow-y: hidden;*/
+    height: 90vh;
+}
+
+.single .dailyDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+/*    align-items: center;*/
+    padding: 50px;
+    background: var(--light);
+} 
+.single .dailyDescription h2 {
+    text-transform: uppercase;
+    font-size: 3rem;
+	margin-bottom: 50px;
+    color: var(--primary);
+    text-align: center;
+}
+
+
+.single hr { 
+  width: 100%;
+  height: 30px; 
+  border-style: solid; 
+  border-color: var(--primary); 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.single hr:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: var(--primary);
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+
+.single .dailyDescription .nutritiveValue {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.single .ingredients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single .ingredients i {
+    color: var(--primary);
+    font-size: 3rem;
+    margin: 0 15px 20px 20px;
+}
+
+.single p {
+    text-align: justify;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.single .btn {
+    margin: 30px auto 0 auto;
+    font-size: 1.3rem;
+}
+
+
 /************ Daily ***************/
 
 .daily {
@@ -531,7 +701,7 @@ p.meta {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+/*    align-items: center;*/
     padding: 50px;
     background: var(--light);
 } 
@@ -573,11 +743,19 @@ p.meta {
     margin-top: 30px;
     font-size: 1.3rem;
 }
+.btn:hover{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--light);
+    background: var(--primary);
+    box-shadow: 0px 0px 5px 6px var(--box-shadow);
+    transition: 0.3s ease;
+    }
 
 /************ Footer  *************/
 footer {
 	background: var(--primary);
-	color: white;
+	color: var(--light);
 }
 footer .container {
 	display: flex;
@@ -587,7 +765,7 @@ footer .container {
 	padding: 100px 50px 20px 50px;
 }
 footer a {
-	color: white;
+	color: var(--light);
 	text-decoration: none;
 }
 footer .container article {
@@ -720,6 +898,7 @@ footer p.copy {
 		text-transform: uppercase;
 		font-size: 1rem;
 	}
+    
 	.socials {
 		width: 40%;
 	}
@@ -787,32 +966,128 @@ footer p.copy {
 	body {
 		overflow-x: hidden;
 	}
+.logo{
+        display: none;
+    }
+.hamburger-menu {
+    width: 35px;
+    height: 30px;
+    position:fixed;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 99;
+    overflow: hidden;
+    
+}
 
-	.nav-links {
-		position: absolute;
-		right: 0px;
-		height: 92vh;
-		top: 8vh;
-		background-color: var(--primary);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 50%;
-		transform: translateX(100%);
-		transition: transform 0.5s ease-in;
-	}
+.lines {
+    width: 100%;
+    height:3px;
+    background-color:var(--light);
+    transition: all 0.8s;
+    
+}
+.change .line-1{
+    transform:rotateZ(-405deg) translate(-8px, 6px);
+}
+.change .line-2{
+    opacity:0;
+}
+.change .line-3{
+    transform:rotateZ(405deg)translate(-8px, -6px);
+}
+.navbar {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary);
+    position: fixed;
+    top:0;
+    right:-100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+    z-index: 99;
+    overflow: hidden;
+   
+    
+        
+}
+.change {
+    right: 0;
+}
+    
+.nav-list {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	list-style: none;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.nav-item {
+	color: var(--light);
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 1.2rem;
+    display: flex;
+	list-style: none;
+}    
+}
+.nav-item a{
+    list-style: none;
+    color: var(--light);
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 20px;
+    margin-bottom: 40px;
+    
+    
+}
 
-	.nav-links li {
-		opacity: 0;
-	}
-	.burger {
-		display: block;
-		cursor: pointer;
-	}
+.nav-link  {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color:var(--light);
+    font-weight: 500;
+    letter-spacing: 1px;
+    position:relative;
+    padding: 2px 0;
+    
+    
+    
+        
+}
 
-	nav .active {
-		transform: translateX(0%);
-	}
+.nav-link::before, 
+.nav-link::after {
+    content:"";
+    width: 100%;
+    height: 2px;
+    background-color:var(--light);
+    position:absolute;
+    left:0;
+    transform: scaleX(0);
+    transition:transform 0.5s;
+    
+}
+.nav-link::after {
+    bottom:0;
+    transform-origin: right;
+}
+.nav-link::before {
+    top:0;
+    transform-origin: left;
+}
+.nav-link:hover::before,
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
 	.featured-img {
 		flex: 0 0 50%;
 	}
@@ -919,23 +1194,5 @@ footer p.copy {
 		flex: 0 0 100%;
 	}
 }
-/****** Animation ******/
-@keyframes navLinkFade {
-	from {
-		opacity: 0;
-		transform: translateX(50px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0px);
-	}
-}
-.toggle .line1 {
-	transform: rotate(-45deg) translate(-5px, 6px);
-}
-.toggle .line2 {
-	opacity: 0;
-}
-.toggle .line3 {
-	transform: rotate(45deg) translate(-5px, -6px);
-}
+
+
