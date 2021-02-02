@@ -57,7 +57,7 @@ body {
     text-decoration: none;
     color: var(--light);
     background: var(--primary);
-    box-shadow: 0px 0px 5px 6px var(--box-shadow);
+    box-shadow: 0px 0px 5px 5px var(--box-shadow);
     transition: 0.3s ease;
 }
 
@@ -126,7 +126,7 @@ nav ul li a:visited {
 }
 
 nav ul li a:hover {
-    color: var(--text-color);
+    color: var(--box-shadow);
 }
 
 /*-------- Header --------*/
@@ -201,6 +201,8 @@ hgroup h1 {
 
 .waves {
     position: relative;
+    overflow:hidden;
+
 }
 
 .wave-big {
@@ -874,8 +876,11 @@ footer a {
 footer .container article a {
     display: block;
     margin-bottom: 10px;
+    
 }
-
+footer a:hover {
+    color:var(--box-shadow);
+}
 footer p.copy {
     text-align: center;
     padding: 10px 0;
@@ -984,13 +989,7 @@ footer p.copy {
         padding: 20px 20px 20px 35px;
     }
 
-    .btn {
-        padding: 10px 45px;
-        border-radius: 50px;
-        text-transform: uppercase;
-        font-size: 1rem;
-    }
-
+    
     .socials {
         width: 40%;
     }
@@ -1093,11 +1092,6 @@ footer p.copy {
             z-index: 99;
             overflow: hidden;
 
-        }
-
-        .hamburger-menu:hover {
-            background-color: var(--box-shadow);
-            border-radius: 10%;
         }
 
         .lines {
