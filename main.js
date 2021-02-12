@@ -90,7 +90,6 @@ window.onscroll = function () {
 };
 
 var a = 0;
-
 $(document).ready(function () {
 	$(".bcta").click(function () {
 		$(".delivery").toggleClass("animate");
